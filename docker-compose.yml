@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+  training:
+    build:
+      context: ./src
+      dockerfile: Dockerfile
+    volumes:
+      - ./src:/app/src
+      - ./test:/app/test
+    networks:
+      - my_network
+    command: tail -f /dev/null
+
+networks:
+  my_network:
