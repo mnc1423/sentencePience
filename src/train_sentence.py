@@ -3,9 +3,9 @@ from datetime import datetime
 import argparse
 
 
-def train(model_prefix):
+def train(model_prefix, data_path):
     
-    spm.SentencePieceTrainer.train(input='data/openweb10k_train.txt',
+    spm.SentencePieceTrainer.train(input=data_path,
                                     model_prefix=model_prefix, vocab_size=1000
                                     )
 
@@ -30,4 +30,4 @@ if __name__ == '__main__':
         test(model_prefix)
     else:
         # Run the complete training process
-        train(model_prefix)
+        train(model_prefix, 'data/openweb10k_train.txt')

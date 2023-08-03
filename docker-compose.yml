@@ -11,6 +11,8 @@ services:
     networks:
       - my_network
     command: tail -f /dev/null
+    environment:
+      - PYTHONPATH=/app  
 
 networks:
   my_network:
