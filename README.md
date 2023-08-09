@@ -14,3 +14,8 @@ pytest test/test.py::test_training -s
 ```
 python src/train_sentence.py
 ```
+
+
+
+# Set Up ArgoCD & Kubernetes (Windows 10)
+1. Enable Kubernetes on Docker Desktop
