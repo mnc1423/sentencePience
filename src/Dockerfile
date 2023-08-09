@@ -11,4 +11,4 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 # Start the training script
-# CMD ["python", "train.py"]
+CMD ["python", "train_sentence.py"]
